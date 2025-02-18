@@ -1,5 +1,4 @@
 // Importa os módulos necessários do React e React Native
-import logox from './assets/NativeLogo.png';
 import React, { useState } from 'react';
 import {
   View,
@@ -60,7 +59,6 @@ const App = () => {
           style={styles.image}
         />
       </View>
-      Image source={logox} style={styles.logo}
       {/* Campo de entrada de texto */}
       <TextInput
         style={styles.textInput}
@@ -110,11 +108,6 @@ const styles = StyleSheet.create({
     width: 100, // Define a largura da imagem
     height: 100, // Define a altura da imagem
     marginBottom: 10, // Adiciona espaçamento abaixo da imagem
-  },
-  logo: {
-    width: 100,
-    height: 100,
-    resizeMode: 'contain',
   },
   textInput: {
     height: 40, // Define a altura do campo de entrada
