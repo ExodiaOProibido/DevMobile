@@ -10,7 +10,6 @@ import {
   FlatList,
   SectionList,
   ActivityIndicator,
-  //Slider,
   Switch,
   ImageBackground,
   StyleSheet,
@@ -21,8 +20,6 @@ const App = () => {
   const [text, setText] = useState('');
   // Estado para controlar o carregamento (loading)
   const [isLoading, setIsLoading] = useState(false);
-  // Estado para armazenar o valor do Slider
-  const [sliderValue, setSliderValue] = useState(0);
   // Estado para armazenar o valor do Switch
   const [switchValue, setSwitchValue] = useState(false);
 

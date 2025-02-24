@@ -10,7 +10,6 @@ import {
   FlatList,
   SectionList,
   ActivityIndicator,
-  //Slider,
   Switch,
   StyleSheet,
 } from 'react-native';
@@ -20,7 +19,6 @@ const App = () => {
   // Definição dos estados para os inputs e controles
   const [text, setText] = useState(''); // Estado para o campo de texto
   const [loading, setLoading] = useState(false); // Estado para indicador de carregamento
-  const [sliderValue, setSliderValue] = useState(0); // Estado para o slider
   const [switchValue, setSwitchValue] = useState(false); // Estado para o switch
 
   // Dados para o FlatList
@@ -70,13 +68,7 @@ const App = () => {
           <Text style={styles.touchableOpacityText}>Touch Me</Text>
         </TouchableOpacity>
         <ActivityIndicator animating={loading} />
-        <Slider
-          minimumValue={0}
-          maximumValue={100}
-          value={sliderValue}
-          onValueChange={setSliderValue}
-        />
-        <Text>Slider Value: {sliderValue}</Text>
+        
         <Switch value={switchValue} onValueChange={setSwitchValue} />
         <Text>Switch Value: {switchValue ? 'On' : 'Off'}</Text>
         <FlatList
