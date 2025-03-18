@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { View } from 'react-native';
+import LoginScreen from './componentes/LoginScreen';
+import CadastroScreen from './componentes/CadastroScreen';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+export default class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { loggedIn: false, username: '', password: '' };
+    }
+
+    handleLogin = (username, password) => {
+        this.setState({ loggedIn: true, username, password });
+    };
+
+    handleVoltar = () => {
+        this.setState({ loggedIn: false, username: '', password: '' });
+    };
+
+    render() {
+        return (
+            <View style={{ flex: 1 }}>
+                {this.state.loggedIn ? (
+                    <CadastroScreen
+                        onVoltar={this.handleVoltar}
+                        username={this.state.username}
+                        password={this.state.password}
+                    />
+                ) : (
+                    <LoginScreen onLogin={this.handleLogin} />
+                )}
+            </View>
+        );
+    }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
