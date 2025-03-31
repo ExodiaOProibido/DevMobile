@@ -13,7 +13,7 @@ export default function Settings({ navigation }: Props) {
             <StatusBar barStyle="dark-content" />
             <Text>Settings Screen</Text>
             {/* Botão que navega para a tela Home. */}
-            <Button
+            <Button 
                 title="Home"
                 onPress={() => navigation.navigate("Home")}
             />

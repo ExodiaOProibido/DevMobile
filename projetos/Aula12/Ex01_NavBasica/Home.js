@@ -9,8 +9,8 @@ type Props = NativeStackScreenProps<RootStackParamList>;
 // Componente Home que exibe a tela inicial.
 export default function Home({ navigation }: Props) {
     return (
-        <View style={styles.container}> 
-            <StatusBar barStyle="dark-content" /> 
+        <View style={styles.container}>
+            <StatusBar barStyle="dark-content" />
             <Text>Home Screen</Text>
             {/* Botão que navega para a tela Settings. */}
             <Button
